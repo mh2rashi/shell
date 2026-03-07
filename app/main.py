@@ -11,7 +11,11 @@ def main():
         if command == "exit":
             break
 
-        print(f"{command}: command not found")
+        elif command[:4] == "echo":
+            sys.stdout.write(f"{command[5:]}\n")
+
+        else:
+            print(f"{command}: command not found")
 
 
 if __name__ == "__main__":
